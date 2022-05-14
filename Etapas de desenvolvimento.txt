@@ -1,0 +1,14 @@
+Criação do banco de dados (OK)
+-Criação das classes de modelo (OK)
+-Criação da conexão comobanco de dados
+-Criação das classes de controle (Acesso aos dados do banco)
+-Criação da interface gráfica
+  -Criação da tela principal:
+       -Criação do CellRederer Prazo
+      -Criação do CellRederer EditareDeletar
+   -Criação da tela de Cadastro de Projeto
+  -Criação da tela de Cadastro de Tarefa
+-Implementação dos eventos
+  -Validações
+Ajustes finais
+Teste da aplicação
