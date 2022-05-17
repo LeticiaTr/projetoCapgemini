@@ -7,23 +7,28 @@ public class Project {
 	private String name;
 	private String description;
 	private Date createdAt;
-	private Date updateAt;
+	private Date updatedAt;
 
 	
-	  Project(int id, String name,String description,Date createdAt,Date updateAt ){
+	  Project(int id, String name,String description,Date createdAt,Date updatedAt ){
 		  
 		  this.id = id;
 		  this.name = name;
 		  this.description = description;
 		  this.createdAt =createdAt;
-		  this.updateAt =updateAt;
+		  this.updatedAt =updatedAt;
 	  }
+	  
+	  public Project() {
+			this.createdAt = new Date();
+			//this.updatedAtt = new Date();
+		}
 
 
 	@Override
 	public String toString() {
 		return "Project [id=" + id + ", name=" + name + ", description=" + description + ", createdAt=" + createdAt
-				+ ", updateAt=" + updateAt + "]";
+				+ ", updateAt=" + updatedAt + "]";
 	}
 
 
@@ -67,13 +72,13 @@ public class Project {
 	}
 
 
-	public Date getUpdateAt() {
-		return updateAt;
+	public Date getUpdatedAt() {
+		return updatedAt;
 	}
 
 
 	public void setUpdateAt(Date updateAt) {
-		this.updateAt = updateAt;
+		this.updatedAt = updateAt;
 	}
 }
 

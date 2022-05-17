@@ -4,27 +4,31 @@ import java.util.Date;
 public class Task {
 
 	private int id;
-	private int project;
+	private int idProject;
 	private String name;
 	private String description;
 	private String notes;
 	private boolean isCompleted;
 	private Date deadline;
 	private Date createdAt;
-	private Date updateAt;
+	private Date updatedAt;
 	
-	public Task(int id, int project, String name, String description, String notes, boolean isCompleted, Date deadline,
-			Date createdAt, Date updateAt) {
+	public Task(int id, int idProject, String name, String description, String notes, boolean isCompleted, Date deadline,
+			Date createdAt, Date updatedAt) {
 		
 		this.id = id;
-		this.project = project;
+		this.idProject = idProject;
 		this.name = name;
 		this.description = description;
 		this.notes = notes;
 		this.isCompleted = isCompleted;
 		this.deadline = deadline;
 		this.createdAt = createdAt;
-		this.updateAt = updateAt;
+		this.updatedAt = updatedAt;
+	}
+	
+	public Task() {
+		this.createdAt = new Date();
 	}
 
 	public int getId() {
@@ -35,12 +39,12 @@ public class Task {
 		this.id = id;
 	}
 
-	public int getProject() {
-		return project;
+	public int getIdProject() {
+		return idProject;
 	}
 
-	public void setProject(int project) {
-		this.project = project;
+	public void setIdProject(int idProject) {
+		this.idProject = idProject;
 	}
 
 	public String getName() {
@@ -91,19 +95,19 @@ public class Task {
 		this.createdAt = createdAt;
 	}
 
-	public Date getUpdateAt() {
-		return updateAt;
+	public Date getUpdatedAt() {
+		return updatedAt;
 	}
 
 	public void setUpdateAt(Date updateAt) {
-		this.updateAt = updateAt;
+		this.updatedAt = updateAt;
 	}
 
 	@Override
 	public String toString() {
-		return "Task [id=" + id + ", project=" + project + ", name=" + name + ", description=" + description
+		return "Task [id=" + id + ", idProject=" + idProject + ", name=" + name + ", description=" + description
 				+ ", notes=" + notes + ", isCompleted=" + isCompleted + ", deadline=" + deadline + ", createdAt="
-				+ createdAt + ", updateAt=" + updateAt + "]";
+				+ createdAt + ", updateAt=" + updatedAt + "]";
 	}
 	
 	
