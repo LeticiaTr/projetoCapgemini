@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProjectCrontroller {
+public class ProjectController {
 	
 	public void save(Project project) {
 		String sql = "INSERT INTO projects (name,"
@@ -32,7 +32,7 @@ public class ProjectCrontroller {
 		      statement.setString (1, project.getName ());
 		      statement.setString(2, project.getDescription());
 		     statement.setDate(3, new Date(project.getCreatedAt() .getTime()));
-		     statement.setDate(4, new Date(project.getUpdatedAt() .getTime()));
+		     statement.setDate(4, new Date (project.getUpdatedAt() .getTime()));
 		     
 		     //Executando a query
 		     statement.execute();
@@ -105,7 +105,7 @@ public class ProjectCrontroller {
 				project.setName(resultSet.getString("name"));
 				project.setDescription(resultSet.getString("description"));
 				project.setCreatedAt(resultSet.getDate("createdAt"));
-				project.setUpdateAt(resultSet.getDate("updateAt"));
+				project.setUpdatedAt(resultSet.getDate("updatedAt"));
 				
 				projects.add(project);
 				

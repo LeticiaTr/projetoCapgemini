@@ -21,7 +21,7 @@ public class Project {
 	  
 	  public Project() {
 			this.createdAt = new Date();
-			//this.updatedAtt = new Date();
+			this.updatedAt = new Date();
 		}
 
 
@@ -77,8 +77,8 @@ public class Project {
 	}
 
 
-	public void setUpdateAt(Date updateAt) {
-		this.updatedAt = updateAt;
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
 	}
 }
 
