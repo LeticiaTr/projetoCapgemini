@@ -16,6 +16,9 @@ import java.awt.Dimension;
 import javax.swing.ListSelectionModel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JTabbedPane;
+import java.awt.GridBagLayout;
+import javax.swing.DebugGraphics;
 
 public class MainScreen {
 
@@ -170,6 +173,7 @@ public class MainScreen {
 		panel_4.setLayout(null);
 		
 		table = new JTable();
+		table.setVisible(false);
 		table.setRowSelectionAllowed(false);
 		table.setDragEnabled(true);
 		table.setDoubleBuffered(true);
@@ -191,14 +195,6 @@ public class MainScreen {
 				"Nome", "Descri\u00E7\u00E3o", "Prazo", "Tarefa Conclu\u00EDda"
 			}
 		) {
-			/**
-			 * 
-			 */
-			private static final long serialVersionUID = 1L;
-			/**
-			 * 
-			 */
-			private static final long serialVersionUID = 1055585518546362949L;
 			Class[] columnTypes = new Class[] {
 				String.class, String.class, String.class, Boolean.class
 			};
